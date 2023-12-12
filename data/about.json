@@ -1,0 +1,22 @@
+{
+  "facts": [
+    "Hello! I am John Lee.",
+    "I'm a full stack developer has been working as a professional web & mobile developer."
+  ],
+  "skills": [
+    "React",
+    "Vue",
+    "Java",
+    "Spring",
+    "Blade",
+    "Python",
+    "Django",
+    "Flask",
+    "Blochchain",
+    "Nuxt.js",
+    "Node js",
+    "Express js",
+    "Mongodb",
+    "Postgres SQL"
+  ]
+}
