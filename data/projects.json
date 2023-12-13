@@ -1,47 +1,46 @@
 [
   {
     "index": 1,
-    "title": "Kenect",
-    "tools": ["NextJs", "TailWind CSS", "Material UI", "Sass"],
-    "live_preview": "https://kenect.com/",
-    "thubmnail": "/assets/images/projects/kenect.jpg",
-    "overview": "Kenect is a SaaS project for companies to be available to get texts from their clients. Built with NextJS, Tailwind CSS and Material UI"
+    "title": "One Wheel",
+    "tools": [
+      "Shopify",
+      "Dawn",
+      "MailChimp",
+      "AWS"
+    ],
+    "live_preview": "https://onewheel.com/",
+    "thubmnail": "/assets/images/projects/onewheel.png",
+    "overview": "One Wheel is the perfect ride for every rider. You can get the best ride here."
   },
   {
     "index": 2,
-    "title": "Echo Limousine",
-    "tools": [
-      "React",
-      "Bootstrap",
-      "Spring",
-      "AWS"
-    ],
-    "live_preview": "https://echolimousine.com/",
-    "thubmnail": "/assets/images/projects/echo_liousine.jpg",
-    "overview": "Echo Limousine is a Limousine rental site. You can rent Limousine anytime. Built with Angular, Node.js and Bootstrap."
+    "title": "Celitic Jewelry",
+    "tools": ["Shopify", "Liquid", "HTML", "CSS"],
+    "live_preview": "https://celticjewellery.ie/",
+    "thubmnail": "/assets/images/projects/celtic.png",
+    "overview": "Sterling Silver Eternal Galway Heart With ancient gaelic script necklace."
   },
   {
     "index": 3,
     "title": "Helixes",
     "tools": [
-      "Vue.js",
-      "Django",
-      "Bootstrap",
+      "Remix",
+      "Shopify",
+      "React",
       "SwiperJs"
     ],
     "live_preview": "https://helixes.co/",
     "thubmnail": "/assets/images/projects/helixes.jpg",
-    "overview": "Helixes is content IP-driven business. Built by Nuxt, BootStrap"
+    "overview": "Helixes is content IP-driven business. Built by Remix, Shopify"
   },
   {
     "index": 4,
     "title": "Code By Edge",
     "tools": [
-      "ReactJs",
-      "NodeJs",
-      "ExpressJs",
-      "Firebase",
-      "Shopify"
+      "Shopify",
+      "React",
+      "Twillo",
+      "Firebase"
     ],
     "live_preview": "https://codebyedge.com/",
     "thubmnail": "/assets/images/projects/codebyedge.jpg",

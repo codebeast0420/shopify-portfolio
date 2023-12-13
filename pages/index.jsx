@@ -42,7 +42,7 @@ export default function App(props) {
           "template_opr22rp",
           {
             from_name: "SomeOne",
-            to_name: "John Lee(Full Stack Developer)",
+            to_name: "John Lee(Shopify Developer)",
             from_email: "someone@email.com",
             to_email: "codebeast0420@gmail.com",
             message: "Someone saw your John's new poersonal website\n" + content,
@@ -98,7 +98,7 @@ export default function App(props) {
         ></meta>
         <meta
           property="og:title"
-          content="John Lee | Full Stack Developer • NextJs | ReactJs | Vue| Blockchain | Typescript | NodeJs | ExpressJs | MongoDB | PostgresSQL"
+          content="John Lee | Shopify Developer • NextJs | ReactJs | Vue| Blockchain | Typescript | NodeJs | ExpressJs | MongoDB | PostgresSQL"
         />
         <meta
           property="og:description"
