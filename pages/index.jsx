@@ -20,6 +20,12 @@ import emailjs from "@emailjs/browser";
 export default function App(props) {
   const [slider, setSlider] = useState(false);
   const { theme } = useTheme();
+  const [isBlock, setIsBlock] = useState(false);
+
+  const blockIps = [
+    "172.176.75.89",
+    "20.169.168.224",
+  ]
 
   const getData = async () => {
     // const res = await axios.get("https://api.ipify.org/?format=json");
@@ -35,29 +41,36 @@ export default function App(props) {
   useEffect(() => {
     getData().then((res) => {
       console.log("res", res.data.ip);
-      const content = `IP: ${res.data.ip}, Country: ${res.data.country_name}, Country Code: ${res.data.country_code}, City Name: ${res.data.city_name}, Region Name: ${res.data.region_name}, Zip Code: ${res.data.zip_code};`;
-      emailjs
-        .send(
-          "service_d1xczde",
-          "template_opr22rp",
-          {
-            from_name: "SomeOne",
-            to_name: "John Lee(Shopify Developer)",
-            from_email: "someone@email.com",
-            to_email: "codebeast0420@gmail.com",
-            message: "Someone saw your John's new poersonal website\n" + content,
-          },
-          "8MpQWozug-Xd3K836"
-        )
-        .then(
-          () => {
-            // setLoading(false);
-          },
-          (error) => {
-            // setLoading(false);
-            console.error(error);
-          }
-        );
+      if (blockIps.includes(res.data.ip)) {
+        alert("Your ip is blocked!");
+        setIsBlock(true);
+      }
+      else {
+        const content = `IP: ${res.data.ip}, Country: ${res.data.country_name}, Country Code: ${res.data.country_code}, City Name: ${res.data.city_name}, Region Name: ${res.data.region_name}, Zip Code: ${res.data.zip_code};`;
+
+        emailjs
+          .send(
+            "service_d1xczde",
+            "template_opr22rp",
+            {
+              from_name: "SomeOne",
+              to_name: "John Lee(Shopify Developer)",
+              from_email: "someone@email.com",
+              to_email: "codebeast0420@gmail.com",
+              message: "Someone saw your John's new poersonal website\n" + content,
+            },
+            "8MpQWozug-Xd3K836"
+          )
+          .then(
+            () => {
+              // setLoading(false);
+            },
+            (error) => {
+              // setLoading(false);
+              console.error(error);
+            }
+          );
+      }
     });
   }, []);
 
@@ -80,57 +93,60 @@ export default function App(props) {
 
   return (
     <>
-      {/* Website Head Paet And Meta Tags Container */}
-      <Head>
-        <title>John Lee&#39;s Portfolio</title>
-        <meta
-          name="theme-color"
-          content={theme === "dark" ? "#111119" : "#fff"}
-        ></meta>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="brainstormbuddy • I'm John Lee, A Passionate Junior FullStack (MERN) Developer. Interested in ReactJs, NextJs, NodeJs, PostgresSQL and MongoDB, and this is my portfolio • mmm066550"
-        />
-        <meta
-          name="keyword"
-          content="john.me, john, lee, mmm066550, MERN, fullstack, nextjs, reactjs, nodejs, expressjs, mongodb, portfolio, javascript, developer"
-        ></meta>
-        <meta
-          property="og:title"
-          content="John Lee | Shopify Developer • NextJs | ReactJs | Vue| Blockchain | Typescript | NodeJs | ExpressJs | MongoDB | PostgresSQL"
-        />
-        <meta
-          property="og:description"
-          content="JavaScript, NextJs, NodeJs, ExpressJs, MongoDB"
-        />
-        <meta property="og:image" content="/me.jpg" />
-        <meta property="og:url" content="https://mmm066550.me" />
-        <meta property="og:type" content="website" />
-      </Head>
-      <Script
-        src="https://unpkg.com/kursor"
-        strategy="beforeInteractive"
-      ></Script>
-      {/* Actual Page Components Wrapper Area */}
-      <SocialLists data={props.links} />
-      <ModeSettings />
-      <main id="app-main" className={styles.container}>
-        <div className="row g-0">
-          <div className="offset-1 col-10">
-            <Navbar data={props.sections} />
-            <Hero data={props.info} />
-            <About data={props.about} />
-            <Education data={props.education} />
-            <Portfolio
-              data={props.projects}
-              slider={slider}
-              setSlider={setSlider}
+      {isBlock == false && (
+        <>
+          <Head>
+            <title>John Lee&#39;s Portfolio</title>
+            <meta
+              name="theme-color"
+              content={theme === "dark" ? "#111119" : "#fff"}
+            ></meta>
+            <link rel="icon" href="/favicon.ico" />
+            <meta
+              name="description"
+              content="brainstormbuddy • I'm John Lee, A Passionate Junior FullStack (MERN) Developer. Interested in ReactJs, NextJs, NodeJs, PostgresSQL and MongoDB, and this is my portfolio • mmm066550"
             />
-            <Contact data={props.links} />
-          </div>
-        </div>
-      </main>
+            <meta
+              name="keyword"
+              content="john.me, john, lee, mmm066550, MERN, fullstack, nextjs, reactjs, nodejs, expressjs, mongodb, portfolio, javascript, developer"
+            ></meta>
+            <meta
+              property="og:title"
+              content="John Lee | Shopify Developer • NextJs | ReactJs | Vue| Blockchain | Typescript | NodeJs | ExpressJs | MongoDB | PostgresSQL"
+            />
+            <meta
+              property="og:description"
+              content="JavaScript, NextJs, NodeJs, ExpressJs, MongoDB"
+            />
+            <meta property="og:image" content="/me.jpg" />
+            <meta property="og:url" content="https://mmm066550.me" />
+            <meta property="og:type" content="website" />
+          </Head>
+          <Script
+            src="https://unpkg.com/kursor"
+            strategy="beforeInteractive"
+          ></Script>
+          {/* Actual Page Components Wrapper Area */}
+          <SocialLists data={props.links} />
+          <ModeSettings />
+          <main id="app-main" className={styles.container}>
+            <div className="row g-0">
+              <div className="offset-1 col-10">
+                <Navbar data={props.sections} />
+                <Hero data={props.info} />
+                <About data={props.about} />
+                <Education data={props.education} />
+                <Portfolio
+                  data={props.projects}
+                  slider={slider}
+                  setSlider={setSlider}
+                />
+                <Contact data={props.links} />
+              </div>
+            </div>
+          </main>
+        </>
+      )}
     </>
   );
 }
