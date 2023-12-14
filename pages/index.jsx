@@ -25,6 +25,7 @@ export default function App(props) {
   const blockIps = [
     "172.176.75.89",
     "20.169.168.224",
+    "52.165.149.97"
   ]
 
   const getData = async () => {
