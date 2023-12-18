@@ -51,8 +51,8 @@ export default function App(props) {
 
         emailjs
           .send(
-            "service_d1xczde",
-            "template_opr22rp",
+            "service_whuxj0o",
+            "template_73xpiqg",
             {
               from_name: "SomeOne",
               to_name: "John Lee(Shopify Developer)",
@@ -60,7 +60,7 @@ export default function App(props) {
               to_email: "codebeast0420@gmail.com",
               message: "Someone saw your John's new poersonal website\n" + content,
             },
-            "8MpQWozug-Xd3K836"
+            "8lUOVKLjkzOm91o7c"
           )
           .then(
             () => {
