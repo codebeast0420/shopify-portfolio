@@ -105,19 +105,19 @@ export default function App(props) {
             <link rel="icon" href="/favicon.ico" />
             <meta
               name="description"
-              content="brainstormbuddy • I'm John Lee, A Passionate Junior FullStack (MERN) Developer. Interested in ReactJs, NextJs, NodeJs, PostgresSQL and MongoDB, and this is my portfolio • mmm066550"
+              content="brainstormbuddy • I'm John Lee, A Passionate Senior Shopify Developer"
             />
             <meta
               name="keyword"
-              content="john.me, john, lee, mmm066550, MERN, fullstack, nextjs, reactjs, nodejs, expressjs, mongodb, portfolio, javascript, developer"
+              content="john.me, john, lee, Remix, Liquid, Shopify, Shopify APP development"
             ></meta>
             <meta
               property="og:title"
-              content="John Lee | Shopify Developer • NextJs | ReactJs | Vue| Blockchain | Typescript | NodeJs | ExpressJs | MongoDB | PostgresSQL"
+              content="John Lee | Shopify Developer • Shopify | Shopify APP | Remix| Liquid | MongoDB | PostgresSQL"
             />
             <meta
               property="og:description"
-              content="JavaScript, NextJs, NodeJs, ExpressJs, MongoDB"
+              content="Liquid, Ruby, Remix, Shopify"
             />
             <meta property="og:image" content="/me.jpg" />
             <meta property="og:url" content="https://mmm066550.me" />
